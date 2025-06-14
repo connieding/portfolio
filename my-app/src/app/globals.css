@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+:root {
+  --foreground: #171717;
+}
+
+
+body {
+  background: linear-gradient(180deg, #5E92D7, #CEC6E4);
+  color: var(--foreground);
+  font-family: var(--font-roboto-mono), monospace;
+  min-height: 100vh;
+}
