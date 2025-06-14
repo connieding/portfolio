@@ -1,9 +1,9 @@
-import Card from "./components/Card";
+import Main from "./pages/main";
 
 export default function Home() {
   return (
     <div className="flex items-center justify-center min-h-screen ">
-      <Card />
+      <Main />
     </div>
   );
 }
