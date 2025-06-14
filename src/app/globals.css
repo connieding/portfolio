@@ -2,6 +2,11 @@
 
 :root {
   --foreground: #171717;
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --text-tertiary: #949393;
+  --text-quaternary: #576CBC;
+  --font-roboto-mono: 'Roboto Mono', monospace;
 }
 
 
@@ -11,3 +16,21 @@ body {
   font-family: var(--font-roboto-mono), monospace;
   min-height: 100vh;
 }
+
+.bg-clouds {
+  background-image:
+    url('/images/cloud_bot.png'),
+    url('/images/cloud_left.png'),
+    url('/images/cloud_right.png');
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 
+    bottom left,
+    top 40px left 140px,
+    center right;
+  background-size:
+    1200px auto, 
+    400px auto,   /* width 150px, height auto */
+    400px auto; 
+}
+
+
