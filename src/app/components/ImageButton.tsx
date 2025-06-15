@@ -24,7 +24,7 @@ export default function ImageButton({
       aria-label={ariaLabel || alt}
     >
       <img src={src} alt={alt} style={{ width: size, height: size }} />
-      {label && <span className="mt-2 font-roboto-mono text-md text-gray-700">{label}</span>}
+      {label && <span className="mt-1 font-roboto-mono text-md" style={{ color: "var(--text-secondary)" }}>{label}</span>}
     </button>
   );
 }

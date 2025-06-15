@@ -15,6 +15,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-roboto-mono), monospace;
   min-height: 100vh;
+  user-select: none;
 }
 
 .bg-clouds {
