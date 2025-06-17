@@ -20,9 +20,9 @@ body {
 
 .bg-clouds {
   background-image:
-    url('/images/cloud_bot.png'),
-    url('/images/cloud_left.png'),
-    url('/images/cloud_right.png');
+    url('/images/cloud_bot.webp'),
+    url('/images/cloud_left.webp'),
+    url('/images/cloud_right.webp');
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: 
     bottom left,
