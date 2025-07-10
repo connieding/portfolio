@@ -59,12 +59,12 @@ export default function Main() {
   return (
     <div className="relative flex items-center justify-center min-h-screen bg-transparent">
       <div className="static">
-        <Card className="w-[700px] h-[450px] max-w-full" headerText="home">
-          <div className="flex flex-col items-center justify-center h-full">
-            <h1 className="font-roboto-mono text-5xl text-black -translate-y-4">
+        <Card className="w-[750px] h-[500px] max-w-full" headerText="home">
+          <div className="flex flex-col items-center justify-center h-full ">
+            <h1 className="font-roboto-mono text-5xl text-black leading-16 -translate-y-4">
               Hi, I'm <span className="font-bold" style={{ color: 'var(--text-quaternary)' }}>Connie!</span>
             </h1>
-            <div className="mt-12 flex gap-8">
+            <div className="mt-8 flex gap-8 flex-wrap justify-center p-4">
               {['about', 'links', 'works', 'contacts'].map((type, i) => (
                 <ImageButton
                   key={type}

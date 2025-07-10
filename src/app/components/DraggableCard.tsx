@@ -117,7 +117,11 @@ export default function DraggableCard({
         onMouseDown={handleMouseDown}
       >
         <Card
-          className="w-[400px] h-[300px] max-w-full"
+          className={`${
+          type === "links" || type === "contacts"
+            ? "w-[400px] h-[350px]"
+            : "w-[750px] h-[500px] max-w-full"
+          }`}
           headerText={type}
           headerRight={
             <button
@@ -129,7 +133,9 @@ export default function DraggableCard({
             </button>
           }
         >
+        <div className="h-[calc(100%-3rem)] overflow-y-auto overflow-hidden">
           {getCardContent()}
+        </div>
         </Card>
       </div>
 
