@@ -9,7 +9,7 @@ export default function LinksCardContent() {
 
       <div className="mt-8 flex gap-8 flex-wrap justify-center p-4">
         <ImageButton
-          src="/icons/linkedin.svg"
+          src="/icons/LinkedIn.svg"
           alt="LinkedIn"
           label="LinkedIn"
           onClick={() =>
