@@ -6,7 +6,6 @@ const cardStyle: React.CSSProperties = {
   borderRadius: "16px",
   padding: "16px",
   cursor: "pointer",
-  transition: "transform 0.15s",
   background: "white",
   display: "flex",
   flexDirection: "column",
@@ -37,6 +36,20 @@ const titleStyle: React.CSSProperties = {
   color: "#222",
 };
 
+const cardHoverStyleTag = (
+  <style>
+    {`
+      .project-card {
+        transition: transform 0.15s;
+      }
+
+      .project-card:hover {
+        transform: scale(1.05);
+      }
+    `}
+  </style>
+);
+
 interface ProjectCardProps {
   title: string;
   imgSrc: string;
@@ -50,20 +63,25 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   githubUrl,
   onClick,
 }) => (
-  <div className="project-card" style={cardStyle} onClick={onClick}>
-    <img src={imgSrc} alt={title} style={imageStyle} />
-    <div style={titleRowStyle}>
-      <div style={titleStyle}>{title}</div>
-      {githubUrl && (
-        <ImageButton
-          src="/icons/github.svg"
-          alt="GitHub"
-          onClick={() => window.open(githubUrl, "_blank")}
-          size={20}
-        />
-      )}
+  <>
+    {cardHoverStyleTag}
+    <div className="project-card" style={cardStyle} onClick={onClick}>
+      <img src={imgSrc} alt={title} style={imageStyle} />
+      <div style={titleRowStyle}>
+        <div style={titleStyle}>{title}</div>
+        {githubUrl && (
+          <ImageButton
+            src="/icons/github.svg"
+            alt="GitHub"
+            onClick={() => {
+              window.open(githubUrl, "_blank");
+            }}
+            size={20}
+          />
+        )}
+      </div>
     </div>
-  </div>
+  </>
 );
 
 export default ProjectCard;

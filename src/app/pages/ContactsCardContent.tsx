@@ -16,7 +16,7 @@ export default function ContactsCardContent() {
           style={{ backgroundColor: "var(--text-quaternary)" }}
           onClick={() => {
             play();
-            window.open("mailto:@gmail.com");
+            window.open("mailto:conniedingnz@gmail.com");
           }}
           type="button"
         >
