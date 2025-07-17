@@ -75,7 +75,12 @@ export default function Main() {
                 <ImageButton
                   key={type}
                   src={
-                    ["/About.svg", "/Link.svg", "/Program.svg", "/Email.svg"][i]
+                    [
+                      "icons/About.svg",
+                      "icons/Link.svg",
+                      "icons/Program.svg",
+                      "icons/Email.svg",
+                    ][i]
                   }
                   alt={type}
                   label={type}

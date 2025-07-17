@@ -12,7 +12,7 @@ export default function AboutCardContent() {
           className="rounded-full object-cover w-32 h-32 sm:w-40 sm:h-40"
         />
 
-        <div className="text-center sm:text-left px-2 sm:pl-8">
+        <div className="text-center sm:text-left px-2 sm:pl-8 self-center">
           <p
             className="tracking-wide text-2xl font-semibold"
             style={{ color: "var(--text-quaternary)" }}
@@ -40,6 +40,19 @@ export default function AboutCardContent() {
           <br />
           <ul className="list-disc list-inside ml-4 mt-4">
             <li>Build new projects</li>
+            <li>
+              Organise{" "}
+              <a
+                href="https://www.sesa.org.nz/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+                style={{ color: "var(--text-quaternary)" }}
+              >
+                SESA
+              </a>{" "}
+              events
+            </li>
             <li>Design wireframes</li>
             <li>Do front-end development!</li>
           </ul>
@@ -74,7 +87,7 @@ export default function AboutCardContent() {
               <span className="text-sm">English</span>
             </li>
             <li>
-              <span className="text-sm">Mandarin</span>
+              <span className="text-sm">Cantonese</span>
             </li>
           </ul>
         </>

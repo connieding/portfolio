@@ -39,7 +39,11 @@ export default function ImageButton({
           flex 
           flex-col 
           items-center 
-          ${isActive ? "scale-110 opacity-100" : "scale-100 opacity-80 hover:opacity-100"}
+          ${
+            isActive
+              ? "scale-110 opacity-100"
+              : "scale-100 opacity-80 hover:opacity-100"
+          }
           ${className}
         `}
         aria-label={ariaLabel || alt}

@@ -3,7 +3,7 @@ import ProjectCard from "../components/ProjectCard";
 
 export default function WorksCardContent() {
   return (
-    <div className="px-16 py-12">
+    <div className="px-4 sm:px-8 md:px-16 py-8 sm:py-10 md:py-12">
       {/* showing some projects */}
       <div
         className="font-semibold text-left text-xl"
@@ -11,11 +11,33 @@ export default function WorksCardContent() {
       >
         Projects
       </div>
-      <div className="flex gap-8 justify-start flex-wrap mt-4 mb-4">
-        <ProjectCard title="Proj 1" imgSrc="/images/p1.jpg" />
-        <ProjectCard title="Proj 2" imgSrc="/images/p2.jpg" />
-        <ProjectCard title="Proj 3" imgSrc="/images/p3.jpg" />
-        <ProjectCard title="Proj 4" imgSrc="/images/p4.jpg" />
+      <div className="flex gap-8  justify-center md:justify-start flex-wrap mt-4 mb-4">
+        <ProjectCard
+          title="The Stolen Text"
+          imgSrc="/works/stolen_text.png"
+          githubUrl="https://github.com/connieding/The-Stolen-Text"
+        />
+        <ProjectCard
+          title="Restore"
+          imgSrc="/works/restore.png"
+          githubUrl="https://github.com/calebwharton/Restore"
+        />
+      </div>
+      <div
+        className="text-left mb-4 "
+        style={{ color: "var(--text-secondary)" }}
+      >
+        See more of my projects on{" "}
+        <a
+          href="https://github.com/connieding"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "var(--text-quaternary)" }}
+          className="underline"
+        >
+          github
+        </a>
+        !
       </div>
       <div className="flex flex-row gap-16">
         {/* Languages Section */}
