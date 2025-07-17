@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState } from "react";
 import Card from "../components/Card";
@@ -16,7 +16,7 @@ export default function Main() {
   const [topCardId, setTopCardId] = useState<string | null>(null);
 
   const getCenterPosition = () => {
-    if (typeof window === 'undefined') return { x: 0, y: 0 };
+    if (typeof window === "undefined") return { x: 0, y: 0 };
     return {
       x: window.innerWidth / 2 - 200,
       y: window.innerHeight / 2 - 150,
@@ -24,7 +24,7 @@ export default function Main() {
   };
 
   const handleButtonClick = (type: string) => {
-    const existingCardIndex = openCards.findIndex(card => card.type === type);
+    const existingCardIndex = openCards.findIndex((card) => card.type === type);
 
     if (existingCardIndex >= 0) {
       const cardToRemove = openCards[existingCardIndex];
@@ -42,7 +42,7 @@ export default function Main() {
   };
 
   const handleCloseCard = (id: string) => {
-    setOpenCards(openCards.filter(card => card.id !== id));
+    setOpenCards(openCards.filter((card) => card.id !== id));
     if (topCardId === id) setTopCardId(null);
   };
 
@@ -53,7 +53,7 @@ export default function Main() {
   const getZIndex = (id: string) => {
     // Assign 50 to topmost, rest based on order
     if (id === topCardId) return 50;
-    return 30 + openCards.findIndex(card => card.id === id);
+    return 30 + openCards.findIndex((card) => card.id === id);
   };
 
   return (
@@ -62,17 +62,25 @@ export default function Main() {
         <Card className="w-[750px] h-[500px] max-w-full" headerText="home">
           <div className="flex flex-col items-center justify-center h-full ">
             <h1 className="font-roboto-mono text-5xl text-black leading-16 -translate-y-4">
-              Hi, I'm <span className="font-bold" style={{ color: 'var(--text-quaternary)' }}>Connie!</span>
+              Hi, I'm{" "}
+              <span
+                className="font-bold"
+                style={{ color: "var(--text-quaternary)" }}
+              >
+                Connie!
+              </span>
             </h1>
-            <div className="mt-8 flex gap-8 flex-wrap justify-center p-4">
-              {['about', 'links', 'works', 'contacts'].map((type, i) => (
+            <div className="mt-4 sm:mt-8 flex gap-4 sm:gap-8 flex-wrap justify-center pt-0 px-4">
+              {["about", "links", "works", "contacts"].map((type, i) => (
                 <ImageButton
                   key={type}
-                  src={["/About.svg", "/Link.svg", "/Program.svg", "/Email.svg"][i]}
+                  src={
+                    ["/About.svg", "/Link.svg", "/Program.svg", "/Email.svg"][i]
+                  }
                   alt={type}
                   label={type}
                   onClick={() => handleButtonClick(type)}
-                  isActive={openCards.some(card => card.type === type)}
+                  isActive={openCards.some((card) => card.type === type)}
                 />
               ))}
             </div>
