@@ -1,4 +1,9 @@
+import React from "react";
+import useSound from "use-sound";
+
 export default function ContactsCardContent() {
+  const [play] = useSound("/sounds/pop.mp3");
+
   return (
     <div className="px-16 py-12">
       <div className="text-left" style={{ color: "var(--text-secondary)" }}>
@@ -9,7 +14,10 @@ export default function ContactsCardContent() {
         <button
           className="flex items-center gap-2 px-6 py-3 text-white rounded-lg text-lg hover:opacity-90 transition"
           style={{ backgroundColor: "var(--text-quaternary)" }}
-          onClick={() => window.open("mailto:conniedingnz@gmail.com")}
+          onClick={() => {
+            play();
+            window.open("mailto:@gmail.com");
+          }}
           type="button"
         >
           Email Me
