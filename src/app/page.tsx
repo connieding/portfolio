@@ -10,7 +10,7 @@ export default function Home() {
         style={{ color: "var(--text-primary)" }}
       >
         <p>
-          <span className="text-lg">©</span> 2025 Connie Ding
+          <span className="text-lg">&copy;</span> 2025 Connie Ding
         </p>
       </footer>
     </div>

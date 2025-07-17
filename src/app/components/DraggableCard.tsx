@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import Card from "./Card";
 import AboutCardContent from "../pages/AboutCardContent";
 import LinksCardContent from "../pages/LinksCardContent";
@@ -86,13 +86,16 @@ export default function DraggableCard({
     }
   };
 
-  const handleMouseMove = (e: MouseEvent) => {
-    if (!isDragging || isMobile) return;
-    setPosition({
-      x: e.clientX - offset.x,
-      y: e.clientY - offset.y,
-    });
-  };
+  const handleMouseMove = useCallback(
+    (e: MouseEvent) => {
+      if (!isDragging || isMobile) return;
+      setPosition({
+        x: e.clientX - offset.x,
+        y: e.clientY - offset.y,
+      });
+    },
+    [isDragging, isMobile, offset]
+  );
 
   const handleMouseUp = () => {
     setIsDragging(false);

@@ -62,7 +62,7 @@ export default function Main() {
         <Card className="w-[750px] h-[500px] max-w-full" headerText="home">
           <div className="flex flex-col items-center justify-center h-full ">
             <h1 className="font-roboto-mono text-5xl text-black leading-16 -translate-y-4">
-              Hi, I'm{" "}
+              Hi, I&apos;m{" "}
               <span
                 className="font-bold"
                 style={{ color: "var(--text-quaternary)" }}
