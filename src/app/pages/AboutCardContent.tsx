@@ -57,7 +57,7 @@ export default function AboutCardContent() {
             <li>Do front-end development!</li>
           </ul>
           <br />
-          <span>Interested to connect? Go to my socials &lt;3</span>
+          <span>Interested to connect? Go to my links &lt;3</span>
           <br />
           <p
             className="text-lg font-semibold mt-8"
