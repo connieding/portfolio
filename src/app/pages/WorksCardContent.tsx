@@ -13,14 +13,22 @@ export default function WorksCardContent() {
       </div>
       <div className="flex gap-8  justify-center md:justify-start flex-wrap mt-4 mb-4">
         <ProjectCard
+          title="Partspedia"
+          imgSrc="/works/partspedia.png"
+          //
+          description="Explore 2D vehicle diagrams, search parts by name or plate, and access automotive data through Partly APIs."
+        />
+        <ProjectCard
           title="The Stolen Text"
           imgSrc="/works/stolen_text.png"
           githubUrl="https://github.com/connieding/The-Stolen-Text"
+          description="Play as a detective in this text-driven mystery adventure powered by OpenAI. Question suspects, uncover clues, and crack the case against the clock."
         />
         <ProjectCard
           title="Restore"
           imgSrc="/works/restore.png"
           githubUrl="https://github.com/calebwharton/Restore"
+          description="A social platform for beach cleanups with a map interface to create, join, and track events."
         />
       </div>
       <div
