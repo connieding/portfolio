@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ImageButton from "./ImageButton"; // Adjust the import path as necessary
+import ImageButton from "./ImageButton"; // Adjust import path if needed
 
 const cardStyle: React.CSSProperties = {
   border: "2px solid #ccc",
@@ -98,11 +98,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   imgSrc,
   githubUrl,
   description,
-  onClick,
 }) => {
   const [active, setActive] = useState(false);
 
   const handleToggleDescription = (e: React.MouseEvent) => {
+    // If the click was inside the GitHub button, don't toggle description
     if ((e.target as HTMLElement).closest(".github-button")) return;
 
     setActive((prev) => !prev);
@@ -132,14 +132,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <div style={titleRowStyle}>
           <div style={titleStyle}>{title}</div>
           {githubUrl && (
-            <ImageButton
-              src="/icons/github.svg"
-              alt="GitHub"
-              onClick={() => {
-                window.open(githubUrl, "_blank");
-              }}
-              size={20}
-            />
+            <div className="github-button">
+              <ImageButton
+                src="/icons/github.svg"
+                alt="GitHub"
+                onClick={() => {
+                  window.open(githubUrl, "_blank");
+                }}
+                size={20}
+              />
+            </div>
           )}
         </div>
       </div>
