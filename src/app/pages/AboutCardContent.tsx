@@ -34,7 +34,7 @@ export default function AboutCardContent() {
       >
         <>
           <span>
-            Hi! I’m Connie, currently in my penultimate year of study at the
+            Hi! I’m Connie, currently in my final year of study at the
             University of Auckland. I like to..
           </span>
           <br />
@@ -53,8 +53,8 @@ export default function AboutCardContent() {
               </a>{" "}
               events
             </li>
-            <li>Design wireframes</li>
-            <li>Do front-end development!</li>
+            <li>Create Figma designs</li>
+            <li>Do full-stack development!</li>
           </ul>
           <br />
           <span>Interested to connect? Go to my links &lt;3</span>

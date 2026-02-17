@@ -21,6 +21,9 @@ const robotoMono = Roboto_Mono({
 
 export const metadata: Metadata = {
   title: "Connie Ding",
+  icons: {
+    icon: "/icons/cat.svg",
+  },
 };
 
 export default function RootLayout({
@@ -30,9 +33,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="icons/cat.svg" />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${robotoMono.variable} antialiased`}
       >
