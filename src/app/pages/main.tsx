@@ -51,7 +51,6 @@ export default function Main() {
   };
 
   const getZIndex = (id: string) => {
-    // Assign 50 to topmost, rest based on order
     if (id === topCardId) return 50;
     return 30 + openCards.findIndex((card) => card.id === id);
   };

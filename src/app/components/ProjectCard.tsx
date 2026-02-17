@@ -102,7 +102,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const [active, setActive] = useState(false);
 
   const handleToggleDescription = (e: React.MouseEvent) => {
-    // If the click was inside the GitHub button, don't toggle description
     if ((e.target as HTMLElement).closest(".github-button")) return;
 
     setActive((prev) => !prev);

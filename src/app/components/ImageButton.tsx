@@ -8,7 +8,7 @@ type ImageButtonProps = {
   ariaLabel?: string;
   className?: string;
   label?: string;
-  isActive?: boolean; // New prop for toggle state
+  isActive?: boolean;
 };
 
 export default function ImageButton({
@@ -66,7 +66,6 @@ export default function ImageButton({
         )}
       </button>
 
-      {/* Hidden audio element */}
       <audio ref={clickAudioRef} src="/sounds/pop.mp3" preload="auto" />
     </>
   );

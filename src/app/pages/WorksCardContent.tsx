@@ -4,7 +4,6 @@ import ProjectCard from "../components/ProjectCard";
 export default function WorksCardContent() {
   return (
     <div className="px-4 sm:px-8 md:px-16 py-8 sm:py-10 md:py-12">
-      {/* showing some projects */}
       <div
         className="font-semibold text-left text-xl"
         style={{ color: "var(--text-quaternary)" }}

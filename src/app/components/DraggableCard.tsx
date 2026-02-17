@@ -94,7 +94,7 @@ export default function DraggableCard({
         y: e.clientY - offset.y,
       });
     },
-    [isDragging, isMobile, offset]
+    [isDragging, isMobile, offset],
   );
 
   const handleMouseUp = () => {
@@ -174,7 +174,6 @@ export default function DraggableCard({
         </Card>
       </div>
 
-      {/* Hidden audio element */}
       <audio ref={clickAudioRef} src="/sounds/close.mp3" preload="auto" />
     </>
   );
